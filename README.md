@@ -8,6 +8,19 @@ You can press **Ctrl+Shift+V** in this file in Visual Studio Code to see a live 
 
 For some tips in formatting text in readme file, refer to https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
 
+# How to use Node Module
+
+create a new JS file (can be called app.js) and have 
+> const manager = require('./Javer_ContextSubManager');
+at line 1
+
+1) Add new subscriber
+   
+To add new subscriber, write console.log(**manager.addSubscriber(userID, username, tier, rewardPoints)**)
+
+Example:
+> console.log(manager.addSubscriber(105, "Alice", "Premium", 6));
+
 # References
 Provide the references that you have used to support your assignment. 
 
