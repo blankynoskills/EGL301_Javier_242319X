@@ -8,11 +8,16 @@ You can press **Ctrl+Shift+V** in this file in Visual Studio Code to see a live 
 
 For some tips in formatting text in readme file, refer to https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
 
+# ContentSubManager
+
+explain your node module here.
+
 # How to use Node Module
 
 create a new JS file (can be called app.js) and have 
 > const manager = require('./Javer_ContextSubManager');
 at line 1
+open terminal and write "node app.js"
 
 1) Add new subscriber
    
@@ -20,6 +25,20 @@ To add new subscriber, write console.log(**manager.addSubscriber(userID, usernam
 
 Example:
 > console.log(manager.addSubscriber(105, "Alice", "Premium", 6));
+
+Expected Outcome:
+> "Successfully added Alice at the Premium tier for 6 months."
+
+2) Update user's tier
+
+To update the user's tier, write console.log(**manager.updateAccessTier(userID, "tier")**)
+
+Example:
+> console.log(manager.updateUserTier(101, "Premium"));
+
+Expected Outcome:
+> "User 101 upgraded from Basic to Premium."
+
 
 # References
 Provide the references that you have used to support your assignment. 
