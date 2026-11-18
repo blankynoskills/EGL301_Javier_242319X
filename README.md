@@ -10,7 +10,7 @@ For some tips in formatting text in readme file, refer to https://docs.github.co
 
 # ContentSubManager
 
-explain your node module here.
+ContentSubManager Node Module is a
 
 # How to use Node Module
 
@@ -19,7 +19,7 @@ create a new JS file (can be called app.js) and have
 at line 1
 open terminal and write "node app.js"
 
-1) Add new subscriber
+**1) Add new subscriber**
    
 To add new subscriber, write console.log(**manager.addSubscriber(userID, username, tier, rewardPoints)**)
 
@@ -29,7 +29,7 @@ Example:
 Expected Outcome:
 > "Successfully added Alice at the Premium tier for 6 months."
 
-2) Update user's tier
+**2) Update user's tier**
 
 To update the user's tier, write console.log(**manager.updateAccessTier(userID, "{tier}")**)
 
@@ -39,7 +39,7 @@ Example:
 Expected Outcome:
 > "User 101 upgraded from Basic to Premium."
 
-3) Verify user's tier access
+**3) Verify user's tier access**
 
 To verify if user have a specific tier access, write console.log(**"Does User {userID} have {tier} access?", manager.verifyTierAccess(userID, "{tier}")**)
 
@@ -49,7 +49,7 @@ Example:
 Expected Outcome (assume User 103 is a basic tier):
 > "Does User 103 have Premium access? false"
 
-4) Billing Cycle
+**4) Billing Cycle**
 
 To bill the user's subscription tier, write console.log(**manager.processBillingCycle()**)
 What it will do is it will take the **monthsRemaining** and minus it by one.
@@ -58,8 +58,27 @@ If user's subscription **monthsReamining** is reduced to 0, downgrade their subs
 Expected Outcome (assuming there is subscription expiring):
 > "Billing cycle processed. 2 accounts expired and were downgraded to Free."
 
-5) 
+**5) Add reward points**
 
+To add rewards points to a user's subscription, write console.log(**manager.addRewardPoints({userID}, {rewardPoints})**)
+**{rewardPoints}** is the amount of reward points you would like to give that user
+
+Example:
+> console.log(manager.addRewardPoints(104, 200));
+
+Expected Outcome:
+
+> "Added 200 points. Total points for Wenxin: 1000"
+
+**6) Remove a subscriber**
+
+To remove a subscriber, write console.log(**(manager.removeSubscriber({userID})**)
+
+Example:
+> console.log(manager.removeSubscriber(102));
+
+Expected Outcome:
+> "Subscriber ID 102 has been removed from the system."
 
 # References
 Provide the references that you have used to support your assignment. 
