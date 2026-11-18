@@ -10,7 +10,7 @@ For some tips in formatting text in readme file, refer to https://docs.github.co
 
 # ContentSubManager
 
-ContentSubManager Node Module is a
+ContentSubManager Node Module is designed to manage user subscriptions for digital media and entertainment platforms (such as Twitch). It provides a system to handle adding new subscribers, upgrading subscription tiers, processing monthly billing cycles, verifying tier access rights, distributing user reward points and removing subscribers.
 
 # How to use Node Module
 
@@ -31,7 +31,7 @@ Expected Outcome:
 
 **2) Update user's tier**
 
-To update the user's tier, write console.log(**manager.updateAccessTier(userID, "{tier}")**)
+To update the user's tier, write console.log(**manager.updateUserTier(userID, "{tier}")**)
 
 Example:
 > console.log(manager.updateUserTier(101, "Premium"));
