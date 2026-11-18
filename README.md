@@ -31,13 +31,34 @@ Expected Outcome:
 
 2) Update user's tier
 
-To update the user's tier, write console.log(**manager.updateAccessTier(userID, "tier")**)
+To update the user's tier, write console.log(**manager.updateAccessTier(userID, "{tier}")**)
 
 Example:
 > console.log(manager.updateUserTier(101, "Premium"));
 
 Expected Outcome:
 > "User 101 upgraded from Basic to Premium."
+
+3) Verify user's tier access
+
+To verify if user have a specific tier access, write console.log(**"Does User {userID} have {tier} access?", manager.verifyTierAccess(userID, "{tier}")**)
+
+Example:
+> console.log("Does User 103 have Premium access?", manager.verifyTierAccess(103, "Premium"));
+
+Expected Outcome (assume User 103 is a basic tier):
+> "Does User 103 have Premium access? false"
+
+4) Billing Cycle
+
+To bill the user's subscription tier, write console.log(**manager.processBillingCycle()**)
+What it will do is it will take the **monthsRemaining** and minus it by one.
+If user's subscription **monthsReamining** is reduced to 0, downgrade their subscription to "Free" tier.
+
+Expected Outcome (assuming there is subscription expiring):
+> "Billing cycle processed. 2 accounts expired and were downgraded to Free."
+
+5) 
 
 
 # References
